@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+    # Node.js application service
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: image-processor
+        restart: always
+        ports:
+            - "3000:3000"
+        environment:
+            - NODE_ENV=production
+            - PORT=3000
+            - MONGODB_URI=mongodb://mongodb:27017/image-processor
+            - REDIS_HOST=redis
+            - REDIS_PORT=6379
+        volumes:
+            - ./uploads:/usr/src/app/uploads
+            - ./processed:/usr/src/app/processed
+        depends_on:
+            - mongodb
+            - redis
+        networks:
+            - app-network
+
+    # MongoDB service
+    mongodb:
+        image: mongo:5.0
+        container_name: mongodb
+        restart: always
+        ports:
+            - "27017:27017"
+        volumes:
+            - mongo-data:/data/db
+        networks:
+            - app-network
+
+    # Redis service
+    redis:
+        image: redis:6-alpine
+        container_name: redis
+        restart: always
+        ports:
+            - "6379:6379"
+        volumes:
+            - redis-data:/data
+        networks:
+            - app-network
+
+# Define networks
+networks:
+    app-network:
+        driver: bridge
+
+# Define volumes
+volumes:
+    mongo-data:
+    redis-data:

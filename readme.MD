@@ -166,6 +166,10 @@ docker run -d -p 6379:6379 redis
 docker run -d -p 27017:27017 --name mongodb mongo
 
 
+# directly run server in docker
+docker compose up -d  --build
+
+
 # Set up environment variables
 cp .env.example .env
 # Edit .env with your configuration
