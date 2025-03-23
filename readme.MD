@@ -57,6 +57,9 @@ Upload a CSV file containing product data and image URLs.
 }
 ```
 
+all updated images are stored under processed folder.
+all csv files requested for are stored under uploads folder
+
 ### Check Job Status
 
 #### GET /api/status/:jobId
