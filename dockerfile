@@ -1,20 +1,23 @@
-FROM node:16-alpine
+FROM node:14
 
-# Create app directory
+# Set the working directory
 WORKDIR /usr/src/app
 
-# Install app dependencies
+# Copy package.json and package-lock.json
 COPY package*.json ./
-RUN npm install
 
-# Bundle app source
+# Install dependencies
+RUN npm install --only=production
+
+# Create necessary directories
+RUN mkdir -p uploads processed
+RUN chmod 777 uploads processed
+
+# Copy the rest of the application files
 COPY . .
 
-# Create directories for uploads and processed images
-RUN mkdir -p uploads processed
-
-# Expose the app port
+# Expose the application port
 EXPOSE 3000
 
-# Start the application
-CMD ["npm", "start"]
+# Command to run the application
+CMD ["node", "server.js"]
