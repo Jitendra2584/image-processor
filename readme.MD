@@ -64,7 +64,7 @@ Follow these steps to upload a file using Postman with the `form-data` body type
    - Select the **form-data** option.
 
 3. **Add the File Upload Field:**
-   - Under the **Key** column, enter the key that the API expects for file uploads (e.g., `file` or `upload`).
+   - Under the **Key** column, enter the key that the API expects for file uploads (`file`).
    - In the **Value** column, select `File` from the dropdown.
    - Click **Select Files** to choose the file you want to upload.
 
