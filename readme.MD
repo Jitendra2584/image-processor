@@ -46,6 +46,7 @@ Upload a CSV file containing product data and image URLs.
 
 -   Content-Type: multipart/form-data
 -   Body: file (CSV file)
+ ** from postman you can upload from form-data and then key = file and select the file in value **
 
 **Response:**
 
