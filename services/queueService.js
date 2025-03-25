@@ -4,10 +4,7 @@ const logger = require("../utils/logger");
 
 // Create a Bull queue
 const imageQueue = new Queue("image-processing", {
-    redis: {
-        host: process.env.REDIS_HOST || "localhost",
-        port: process.env.REDIS_PORT || 6379,
-    },
+    redis: process.env.REDIS_URL || "redis://localhost:6379",
 });
 
 /**
