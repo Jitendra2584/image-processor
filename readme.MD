@@ -46,7 +46,30 @@ Upload a CSV file containing product data and image URLs.
 
 -   Content-Type: multipart/form-data
 -   Body: file (CSV file)
- ** from postman you can upload from form-data and then key = file and select the file in value **
+
+
+# Uploading a File using Postman (form-data)
+
+Follow these steps to upload a file using Postman with the `form-data` body type:
+
+## Steps:
+
+1. **Set up the Request:**
+   - Open Postman.
+   - Set the HTTP method to `POST` (or the appropriate method for your API).
+   - Enter the API endpoint URL.
+
+2. **Set Body to `form-data`:**
+   - Go to the **Body** tab in Postman.
+   - Select the **form-data** option.
+
+3. **Add the File Upload Field:**
+   - Under the **Key** column, enter the key that the API expects for file uploads (e.g., `file` or `upload`).
+   - In the **Value** column, select `File` from the dropdown.
+   - Click **Select Files** to choose the file you want to upload.
+
+4. **Send the Request:**
+   - Once the file is selected, click **Send** to submit the request to the API.
 
 **Response:**
 
