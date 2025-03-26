@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "6d4caf32-5aac-4cc1-97fc-7e2def08613f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36515442"
+	},
+	"item": [
+		{
+			"name": "check processed data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://homeless-tabitha-individual-test-123-d16afd6f.koyeb.app/api/status/62233126-8575-45a0-81b1-a63faa4fe6bc",
+					"protocol": "https",
+					"host": [
+						"homeless-tabitha-individual-test-123-d16afd6f",
+						"koyeb",
+						"app"
+					],
+					"path": [
+						"api",
+						"status",
+						"62233126-8575-45a0-81b1-a63faa4fe6bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/jitendra/Documents/Personal/test.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://homeless-tabitha-individual-test-123-d16afd6f.koyeb.app/api/upload",
+					"protocol": "https",
+					"host": [
+						"homeless-tabitha-individual-test-123-d16afd6f",
+						"koyeb",
+						"app"
+					],
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

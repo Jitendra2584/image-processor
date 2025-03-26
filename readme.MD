@@ -34,6 +34,13 @@ The application consists of several key components:
 5. Worker threads process images in parallel
 6. Client can check job status through the API
 
+## understanding project
+
+1. functions.MD -> in this file you can see how can all function of this works
+2. image-proecessor-postman.json -> in this file postman apis
+3. workers.MD -> detail about worker functionality
+4. database-models -> detail about database schema
+
 ## API Endpoints
 
 ### Upload CSV
