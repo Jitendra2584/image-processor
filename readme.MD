@@ -187,16 +187,6 @@ Serial Number,Product Name,Input Image Urls
 git clone https://github.com/yourusername/image-processor-app.git
 cd image-processor-app
 
-# Install dependencies
-npm install
-
-# run redis via docker(best way)
-docker run -d -p 6379:6379 redis
-
-# run mongo via docker
-docker run -d -p 27017:27017 --name mongodb mongo
-
-
 # directly run server in docker
 docker compose up -d  --build
 
@@ -216,7 +206,9 @@ REDIS_PORT=6379
 STORAGE_PATH=./processed
 ```
 
-### Running the Application
+### Running the Application locally
+
+first install all dependencies(npm install)
 
 ```bash
 # Start in production mode
